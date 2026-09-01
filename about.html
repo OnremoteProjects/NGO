@@ -7,6 +7,51 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  /* Pull-quote style for tribute/legacy quotes, matches site tokens */
+  .quote-block {
+    position: relative;
+    margin-top: 22px !important;
+    padding: 20px 24px 20px 28px;
+    background: var(--cream-100);
+    border-left: 3px solid var(--saffron-500);
+    border-radius: var(--radius-sm);
+  }
+  .quote-block b {
+    color: var(--teal-900);
+    font-style: italic;
+    font-size: 16.5px;
+    line-height: 1.6;
+  }
+
+  /* Fix founder photo crop — show full portrait instead of a tight
+     zoomed-in crop on the face/chest */
+  .founder-photo {
+    object-fit: cover;
+    object-position: center 18%;
+    max-height: 560px !important;
+  }
+  @media (max-width: 880px) {
+    .founder-photo {
+      max-height: 460px !important;
+      object-position: center 12%;
+    }
+  }
+
+  /* Fix father.png crop — tight portrait, show face and shoulders
+     without an over-zoomed crop */
+  .father-photo {
+    object-fit: cover;
+    object-position: center 15%;
+    max-height: 560px !important;
+  }
+  @media (max-width: 880px) {
+    .father-photo {
+      max-height: 460px !important;
+      object-position: center 10%;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -70,12 +115,30 @@
   </div>
 </section>
 
+<!-- ============ FATHER'S LEGACY ============ -->
+<section class="bg-cream">
+  <div class="container">
+    <div class="split reverse">
+      <div class="split-media">
+        <img src="assets/images/father.png" alt="Shri Kundan Lal Mahajan tribute" class="father-photo">
+      </div>
+      <div class="split-body">
+        <p class="eyebrow">A Father's Legacy</p>
+        <h2>The Sacrifice That Shaped Our Journey</h2>
+        <p class="quote-block">
+          <b>"His dedication and sacrifice became the foundation upon which we built our lives."</b>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ OUR FOUNDER ============ -->
 <section>
   <div class="container">
-    <div class="split reverse">
+    <div class="split">
        <div class="split-media">
-        <img src="assets/images/founder.png" alt="NGO founder and team photo">
+        <img src="assets/images/founder.png" alt="NGO founder and team photo" class="founder-photo">
         <div class="badge"><span class="num">2K+</span><span class="lbl">Lives Touched</span></div>
       </div>
       <div class="split-body">
@@ -157,7 +220,7 @@ I am <b>Ved Prakash Gupta, a native of Ali Beg, District Mirpur (PoK).</b>
 <!-- ============ JOURNEY / TIMELINE ============ -->
 <section class="bg-cream">
   <div class="container">
-    <div class="split reverse">
+    <div class="split">
       <div class="split-media">
         <img src="assets/images/gallery-inauguration-1.png" alt="Inauguration day">
       </div>
@@ -237,7 +300,7 @@ I am <b>Ved Prakash Gupta, a native of Ali Beg, District Mirpur (PoK).</b>
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© 2026 Ram Pyari Kundan Lal Mahajan NGO. All rights reserved.</span>
+    <span>©️ 2026 Ram Pyari Kundan Lal Mahajan NGO. All rights reserved.</span>
     <span>Registered Charitable Trust</span>
   </div>
 </footer>
